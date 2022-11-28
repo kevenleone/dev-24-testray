@@ -58,17 +58,17 @@ Using a simple interface and a prosperous import feature, integrating with tests
 Testray was written with the following spects
 
 - 📝 **Platform** - Liferay Portal 7.1
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- 🤹 **Application** - Portlet based, Testray works as MVC Project.
+- 🎨 **Theme** - Liferay Themelets used with npm packages
+- 🎲 **Database** - Database Access with Service Builder Modules
+- 🧶 **Stack** - Java, JSP
 
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+Read more about [Portlets](https://help.liferay.com/hc/en-us/articles/360017885732-Introduction-to-Portlets), 
+[Themelets](https://help.liferay.com/hc/en-us/articles/360017882992-Themelets-) and
+[Service Builder](https://help.liferay.com/hc/en-us/articles/360017886532-What-is-Service-Builder-#:~:text=Liferay%20Service%20Builder%20is%20a,code%20for%20the%20underlying%20database.)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -93,52 +93,126 @@ Here is another comment.
 
 ---
 
-# Navigation
+# 7.1 Module Structure
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+This structure is pretty common for Liferay Projects beforer 7.4, all the modules serve on specific purpose, Java knowledge is important to write and configure then.
 
-### Keyboard Shortcuts
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+<div grid="~ cols-2">
+  <div>
+    <img src="assets/testray-01-structure.png" class="w-90" />
+  </div>
+    
+  <div>
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+  ### Important modules
+
+  |     |     |
+  | --- | --- |
+  | osb-testray-api | TBD |
+  | osb-testray-service | TBD |
+  | osb-testray-taglib | TBD |
+  | osb-testray-theme | TBD |
+  | osb-testray-web | TBD |
+  </div>
+</div>
+
+--- #4
+
+# 7.4 with Site Initializer
+
+Testray 2.0 relies on Site Initializer to provide all the assets and structure necessary to use on 7.4
+
+With Site Initializer we do:
+
+<v-clicks>
+
+  - Create the Site.
+  - Create Object Definition, Relationships, Populate Data, add PickList and more.
+  - Define Layout Configuration, Fragments, Stylebook.
+  - Define Roles and assign permissions to then.
+  - Create Documents in Documents and Media.
+  - Create Client Extension.
+  
+</v-clicks>
+
+<span v-after>
+
+  And so much more can be done with Site Initializer, but those features attend our needs for now.
+
+</span>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
 
-# Code
+# Object Definition
 
-Use code snippets and get the highlighting directly![^1]
+Example of Testray Project Object definition
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+<div grid="~ cols-2 gap-4">
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
+<div>
+
+```json {all|2-4|5|6-16|17-19|20|all} 
+{
+	"label": {
+		"en_US": "Testray Project"
+	},
+	"name": "Project",
+	"objectFields": [
+		{
+			"indexed": true,
+			"label": {
+				"en_US": "Name"
+			},
+			"name": "name",
+			"required": true,
+			"type": "String"
+		}
+	],
+	"pluralLabel": {
+		"en_US": "Testray Projects"
+	},
+	"scope": "company",
 }
 ```
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+</div>
+
+<div>
+  <span v-click="1">
+
+  - Object Definition Friendly Name
+
+  </span>
+
+  <span v-click="2">
+
+  - Object Name Friendly Name
+
+  </span>
+
+  <span v-click="3">
+
+  - This array can be used to map all **columns** used in Object Definition, in this case we are mapping the name as ```string, indexable and required```.
+
+  </span>
+
+  <span v-click="4">
+
+  - Same as 2 but Pluralized
+
+  </span>
+
+  <span v-click="5">
+
+  - Scope can be "Site" | "Company"
+    - Site scopes the data by the current site that you are accessing, you must pass the siteId to the request, if you have multiple sites, you cannot read from other.
+    - Company scopes means that, all sites inside this company can share the data. 
+
+  </span>
+</div>
+
+</div>
 
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
@@ -155,6 +229,44 @@ function updateUser(id: number, update: User) {
 </style>
 
 ---
+
+# Testray 2.0
+
+qwekoqwjekqwsdasd
+
+
+---
+
+
+# Testray 2.0 React EntryPoint
+
+```ts 
+class Testray extends HTMLElement {
+	connectedCallback() {
+		createRoot(this).render(
+			<SWRConfig>
+				<ApplicationContextProvider
+					properties={{
+						jiraBaseURL: this.getAttribute('jiraBaseURL') || '',
+					}}
+				>
+					<ClayIconProvider>
+						<TestrayRouter />
+					</ClayIconProvider>
+				</ApplicationContextProvider>
+			</SWRConfig>
+		);
+	}
+}
+
+if (!customElements.get("liferay-remote-app-testray")) {
+	customElements.define("liferay-remote-app-testray", Testray);
+}
+```
+
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+
+--- 
 
 # Components
 
