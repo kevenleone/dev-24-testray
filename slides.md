@@ -3,7 +3,7 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://images.unsplash.com/photo-1668889311480-95cbd4d5c9cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -23,9 +23,9 @@ drawings:
 css: unocss
 ---
 
-# Welcome to Slidev
+# Testray dev/24
 
-Presentation slides for developers
+Behind Testray 2, how we are rewriting a software using 7.4
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -49,11 +49,15 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# What is Slidev?
+# What is Testray?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Testray is a simple and powerful Test Management SAAS application which offers a robust solution to effectively analyze test results in an intuitive and actionable way.
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
+Using a simple interface and a prosperous import feature, integrating with tests written in Poshi, Testray allows your test team to get started immediately, presenting test results grouped for quick analysis and action.
+
+Testray was written with the following spects
+
+- 📝 **Platform** - Liferay Portal 7.1
 - 🎨 **Themable** - theme can be shared and used with npm packages
 - 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
 - 🤹 **Interactive** - embedding Vue components to enhance your expressions
