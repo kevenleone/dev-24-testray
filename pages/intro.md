@@ -1,6 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: seriph
+title: Amazing slide title
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://images.unsplash.com/photo-1668889311480-95cbd4d5c9cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80

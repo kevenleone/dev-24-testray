@@ -1,3 +1,7 @@
+---
+title: Object Definition
+---
+
 # Object Definition
 
 Example of Testray Project Object definition
@@ -81,3 +85,4 @@ Example of Testray Project Object definition
   display: none;
 }
 </style>
+

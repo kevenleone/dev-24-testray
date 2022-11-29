@@ -1,4 +1,4 @@
-# Testray 2.0
+# Testray 2.0 - Libraries
 
 |     |     |
 | --- | --- |
@@ -7,6 +7,7 @@
 | swr | React Hooks for Data Fetching |
 | typescript | TypeScript is JavaScript with syntax for types |
 | vite | Next Generation Frontend Tooling |
+| yup | Yup is a JavaScript schema builder for value parsing and validation |
 
 <br />
 
