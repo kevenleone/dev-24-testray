@@ -1,3 +1,7 @@
+---
+title: 7.1 Module Structure
+---
+
 # 7.1 Module Structure
 
 This structure is pretty common for Liferay Projects before 7.4, all the modules serve on specific purpose, Java knowledge is important to write and configure then.
@@ -21,3 +25,7 @@ This structure is pretty common for Liferay Projects before 7.4, all the modules
   | osb-testray-web  |
   </div>
 </div>
+
+<!--
+* Theme is created with Blade and Themelets
+-->

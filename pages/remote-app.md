@@ -41,3 +41,10 @@ declare global {
    }
 </style>
 
+<!--
+hello everyone, great to be here with you all, so I'll explain a little bit about our development process.
+
+As keven mentioned before, we are using the remote app to develop Testray 2.
+
+to make the development go faster we used vite which gave us the possibility to use hot realoading.
+-->

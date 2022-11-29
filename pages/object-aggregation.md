@@ -29,3 +29,4 @@ Having this image as example, we need to create an aggregation for each column i
         font-size: 12px;
     }
 </style>
+

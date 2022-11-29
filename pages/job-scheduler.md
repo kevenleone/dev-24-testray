@@ -1,23 +1,13 @@
-# Job Scheduler
-We need to use a Job Scheduler to populate the data of Testray Objects, that data come from Storage Bucket.
+---
+title: Job Scheduler
+---
 
+# Job Scheduler
+We use a Job Scheduler to process asyncronous jobs.
 
 <img m="t-5" border="rounded" src="assets/job_scheduler_running.png"  />
 
-<br />
-<br />
+⚡️  We use Job Scheduler to populate the Objects Definitions, those data comes from Liferay Storage Bucket.
 
-⚡️  Using Job Scheduler to populate this data was very important to improve the import data speed.
-
-⏰  In addition to using to populate the data of objects, we still working to can use that realize tasks that consuming a lot of time, how creation of subtasks.
-
-
-
-
-
-
-
-
-
-
+⏰ In addition, we have preparing more Job scheduler to handle asyncronous job to process data based on a trigger.
 

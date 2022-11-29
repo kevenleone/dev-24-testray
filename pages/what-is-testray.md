@@ -1,6 +1,7 @@
 ---
 title: Amazing slide title
 ---
+
 # What is Testray?
 
 Testray is a simple and powerful Test Management SAAS application which offers a robust solution to effectively analyze test results in an intuitive and actionable way.
@@ -40,5 +41,5 @@ h1 {
 </style>
 
 <!--
-Here is another comment.
+Testray is a tool to analyse tests, mostly used by QA's to analyze the build
 -->
